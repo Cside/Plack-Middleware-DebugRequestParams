@@ -36,15 +36,18 @@ __END__
 
 =head1 NAME
 
-Plack::Middleware::DebugRequestParameters - It's new $module
+Plack::Middleware::DebugRequestParameters - debug request parameters (inspired by Catalyst)
 
 =head1 SYNOPSIS
 
-    use Plack::Middleware::DebugRequestParameters;
-
-=head1 DESCRIPTION
-
-Plack::Middleware::DebugRequestParameters is ...
+    $ plackup -e 'enable "DebugRequestParameters"' app.psgi
+    $ curl -F foo=bar -F baz=foobar http://localhost:5000/
+    .--------------------.
+    | Parameter | Value  |
+    +-----------+--------+
+    | baz       | foobar |
+    | foo       | bar    |
+    '-----------+--------'
 
 =head1 LICENSE
 
