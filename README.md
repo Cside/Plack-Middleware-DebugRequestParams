@@ -1,14 +1,14 @@
 # NAME
 
-Plack::Middleware::Devel::QueryParam - It's new $module
+Plack::Middleware::DebugRequestParameters - It's new $module
 
 # SYNOPSIS
 
-    use Plack::Middleware::Devel::QueryParam;
+    use Plack::Middleware::DebugRequestParameters;
 
 # DESCRIPTION
 
-Plack::Middleware::Devel::QueryParam is ...
+Plack::Middleware::DebugRequestParameters is ...
 
 # LICENSE
 

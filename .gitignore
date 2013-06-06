@@ -23,4 +23,4 @@ cover_db/
 
 MYMETA.*
 
-/Plack-Middleware-Devel-QueryParam-*
+/Plack-Middleware-DebugRequestParameters-*

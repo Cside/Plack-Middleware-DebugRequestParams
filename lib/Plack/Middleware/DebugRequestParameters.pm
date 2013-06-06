@@ -1,4 +1,4 @@
-package Plack::Middleware::Devel::QueryParam;
+package Plack::Middleware::DebugRequestParameters;
 use 5.008005;
 use strict;
 use warnings;
@@ -36,15 +36,15 @@ __END__
 
 =head1 NAME
 
-Plack::Middleware::Devel::QueryParam - It's new $module
+Plack::Middleware::DebugRequestParameters - It's new $module
 
 =head1 SYNOPSIS
 
-    use Plack::Middleware::Devel::QueryParam;
+    use Plack::Middleware::DebugRequestParameters;
 
 =head1 DESCRIPTION
 
-Plack::Middleware::Devel::QueryParam is ...
+Plack::Middleware::DebugRequestParameters is ...
 
 =head1 LICENSE
 

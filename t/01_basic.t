@@ -7,10 +7,10 @@ use Test::Differences qw(eq_or_diff);
 use HTTP::Request::Common qw(GET POST);
 use Plack::Test qw(test_psgi);
 use Capture::Tiny qw(capture_stderr);
-use Plack::Middleware::Devel::QueryParam;
+use Plack::Middleware::DebugRequestParameters;
 
 my $app = sub { [ 200, ["Content-Type" => "text/plain"], ['200 OK'] ] };
-$app = Plack::Middleware::Devel::QueryParam->wrap($app);
+$app = Plack::Middleware::DebugRequestParameters->wrap($app);
 
 filters {
     method   => [qw(chomp)],

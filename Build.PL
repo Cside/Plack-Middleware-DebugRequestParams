@@ -23,8 +23,8 @@ my %args = (
         'Module::Build' => 0.38,
     },
 
-    name            => 'Plack-Middleware-Devel-QueryParam',
-    module_name     => 'Plack::Middleware::Devel::QueryParam',
+    name            => 'Plack-Middleware-DebugRequestParameters',
+    module_name     => 'Plack::Middleware::DebugRequestParameters',
     allow_pure_perl => 0,
 
     script_files => [glob('script/*'), glob('bin/*')],

@@ -12,6 +12,6 @@ my $app = sub {
 };
 
 builder {
-    enable 'Devel::QueryParam';
+    enable 'DebugRequestParameters';
     $app;
 };
