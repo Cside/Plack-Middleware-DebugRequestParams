@@ -2,6 +2,10 @@ Revision history for Perl extension Plack-Middleware-DebugRequestParameters
 
 {{$NEXT}}
 
+0.03 2013-06-07T00:03:34Z
+
+    - fix
+
 0.02 2013-06-06T23:57:10Z
 
     - fix cpanfile

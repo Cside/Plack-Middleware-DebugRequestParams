@@ -71,5 +71,5 @@
          "web" : "https://github.com/Cside/Plack-Middleware-DebugRequestParameters"
       }
    },
-   "version" : "0.02"
+   "version" : "0.03"
 }
