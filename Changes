@@ -2,6 +2,8 @@ Revision history for Perl extension Plack-Middleware-DebugRequestParameters
 
 {{$NEXT}}
 
+    - add ignore_path option
+
 0.03 2013-06-07T00:03:34Z
 
     - fix

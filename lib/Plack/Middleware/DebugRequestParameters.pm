@@ -6,23 +6,25 @@ use parent qw(Plack::Middleware);
 use Text::ASCIITable;
 use Plack::Request;
 
-our $VERSION = "0.03";
+our $VERSION = "0.04";
 
 sub call {
     my($self, $env) = @_;
 
-    my $req = Plack::Request->new($env);
-    my $params = $req->parameters;
-    if (%$params) {
-        my $table = Text::ASCIITable->new;
-        $table->setCols(qw(Parameter Value));
-        for my $key (sort keys %$params) {
-            my @values = $params->get_all($key);
-            for my $value (@values) {
-                $table->addRow($key, $value);
+    if ($self->{ignore_path} && $env->{REQUEST_URI} !~ /$self->{ignore_path}/) {
+        my $req = Plack::Request->new($env);
+        my $params = $req->parameters;
+        if (%$params) {
+            my $table = Text::ASCIITable->new;
+            $table->setCols(qw(Parameter Value));
+            for my $key (sort keys %$params) {
+                my @values = $params->get_all($key);
+                for my $value (@values) {
+                    $table->addRow($key, $value);
+                }
             }
+            print STDERR $table;
         }
-        print STDERR $table;
     }
 
     return $self->app->($env);
@@ -48,6 +50,22 @@ Plack::Middleware::DebugRequestParameters - debug request parameters (inspired b
     | baz       | foobar |
     | foo       | bar    |
     '-----------+--------'
+
+=head1 OPTIONS
+
+=over
+
+=item ignore_path
+
+    use Plack::Builder;
+
+    builder {
+        enable "DebugRequestParameters",
+            ignore_path => qr{^/(images|js|css)/},
+        $app;
+    };
+
+=back
 
 =head1 LICENSE
 
