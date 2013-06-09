@@ -1,4 +1,4 @@
-package Plack::Middleware::DebugRequestParameters;
+package Plack::Middleware::DebugRequestParams;
 use 5.008005;
 use strict;
 use warnings;
@@ -11,7 +11,7 @@ our $VERSION = "0.04";
 sub call {
     my($self, $env) = @_;
 
-    if ($self->{ignore_path} && $env->{REQUEST_URI} !~ /$self->{ignore_path}/) {
+    if (! ($self->{ignore_path} &&  $env->{REQUEST_URI} =~ /$self->{ignore_path}/)) {
         my $req = Plack::Request->new($env);
         my $params = $req->parameters;
         if (%$params) {
@@ -38,11 +38,11 @@ __END__
 
 =head1 NAME
 
-Plack::Middleware::DebugRequestParameters - debug request parameters (inspired by Catalyst)
+Plack::Middleware::DebugRequestParams - debug request parameters (inspired by Catalyst)
 
 =head1 SYNOPSIS
 
-    $ plackup -e 'enable "DebugRequestParameters"' app.psgi
+    $ plackup -e 'enable "DebugRequestParams"' app.psgi
     $ curl -F foo=bar -F baz=foobar http://localhost:5000/
     .--------------------.
     | Parameter | Value  |
@@ -60,7 +60,7 @@ Plack::Middleware::DebugRequestParameters - debug request parameters (inspired b
     use Plack::Builder;
 
     builder {
-        enable "DebugRequestParameters",
+        enable "DebugRequestParams",
             ignore_path => qr{^/(images|js|css)/},
         $app;
     };

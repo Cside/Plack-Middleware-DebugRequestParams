@@ -3,15 +3,14 @@ use strict;
 use warnings;
 use Test::More;
 use Test::Base::Less;
-use Project::Libs;
 use Test::Differences qw(eq_or_diff);
 use HTTP::Request::Common qw(GET POST);
 use Plack::Test qw(test_psgi);
 use Capture::Tiny qw(capture_stderr);
-use Plack::Middleware::DebugRequestParameters;
+use Plack::Middleware::DebugRequestParams;
 
 my $app = sub { [ 200, ["Content-Type" => "text/plain"], ['200 OK'] ] };
-$app = Plack::Middleware::DebugRequestParameters->wrap($app,
+$app = Plack::Middleware::DebugRequestParams->wrap($app,
     ignore_path => qr{^/static/},
 );
 

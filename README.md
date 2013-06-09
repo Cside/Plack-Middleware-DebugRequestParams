@@ -1,10 +1,10 @@
 # NAME
 
-Plack::Middleware::DebugRequestParameters - debug request parameters (inspired by Catalyst)
+Plack::Middleware::DebugRequestParams - debug request parameters (inspired by Catalyst)
 
 # SYNOPSIS
 
-    $ plackup -e 'enable "DebugRequestParameters"' app.psgi
+    $ plackup -e 'enable "DebugRequestParams"' app.psgi
     $ curl -F foo=bar -F baz=foobar http://localhost:5000/
     .--------------------.
     | Parameter | Value  |

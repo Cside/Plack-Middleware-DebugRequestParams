@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "Plack-Middleware-DebugRequestParameters",
+   "name" : "Plack-Middleware-DebugRequestParams",
    "no_index" : {
       "directory" : [
          "t",
@@ -62,13 +62,13 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/Cside/Plack-Middleware-DebugRequestParameters/issues"
+         "web" : "https://github.com/Cside/Plack-Middleware-DebugRequestParams/issues"
       },
-      "homepage" : "https://github.com/Cside/Plack-Middleware-DebugRequestParameters",
+      "homepage" : "https://github.com/Cside/Plack-Middleware-DebugRequestParams",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/Cside/Plack-Middleware-DebugRequestParameters.git",
-         "web" : "https://github.com/Cside/Plack-Middleware-DebugRequestParameters"
+         "url" : "git://github.com/Cside/Plack-Middleware-DebugRequestParams.git",
+         "web" : "https://github.com/Cside/Plack-Middleware-DebugRequestParams"
       }
    },
    "version" : "0.03"
