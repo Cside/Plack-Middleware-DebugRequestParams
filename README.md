@@ -13,6 +13,18 @@ Plack::Middleware::DebugRequestParams - debug request parameters (inspired by Ca
     | foo       | bar    |
     '-----------+--------'
 
+# OPTIONS
+
+- ignore\_path
+
+        use Plack::Builder;
+
+        builder {
+            enable "DebugRequestParams",
+                ignore_path => qr{^/(images|js|css)/},
+            $app;
+        };
+
 # LICENSE
 
 Copyright (C) Hiroki Honda.

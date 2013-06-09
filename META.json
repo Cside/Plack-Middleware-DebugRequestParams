@@ -62,14 +62,14 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/Cside/Plack-Middleware-DebugRequestParams/issues"
+         "web" : "https://github.com/Cside/Plack-Middleware-DebugRequestParameters/issues"
       },
-      "homepage" : "https://github.com/Cside/Plack-Middleware-DebugRequestParams",
+      "homepage" : "https://github.com/Cside/Plack-Middleware-DebugRequestParameters",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/Cside/Plack-Middleware-DebugRequestParams.git",
-         "web" : "https://github.com/Cside/Plack-Middleware-DebugRequestParams"
+         "url" : "git://github.com/Cside/Plack-Middleware-DebugRequestParameters.git",
+         "web" : "https://github.com/Cside/Plack-Middleware-DebugRequestParameters"
       }
    },
-   "version" : "0.03"
+   "version" : "0.04"
 }
