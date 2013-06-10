@@ -1,7 +1,6 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
-use Project::Libs;
 use Test::More;
 use Test::Base::Less;
 use Test::Differences qw(eq_or_diff);
