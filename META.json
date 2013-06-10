@@ -71,5 +71,8 @@
          "web" : "https://github.com/Cside/Plack-Middleware-DebugRequestParameters"
       }
    },
-   "version" : "0.04"
+   "version" : "0.05",
+   "x_contributors" : [
+      "Syohei YOSHIDA <syohex@gmail.com>"
+   ]
 }
