@@ -12,3 +12,4 @@ on 'test' => sub {
 requires 'parent';
 requires 'Plack::Request';
 requires 'Text::ASCIITable';
+requires 'Text::VisualWidth';

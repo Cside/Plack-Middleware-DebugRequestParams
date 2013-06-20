@@ -5,8 +5,9 @@ use warnings;
 use parent qw(Plack::Middleware);
 use Text::ASCIITable;
 use Plack::Request;
+use Text::VisualWidth::UTF8;
 
-our $VERSION = "0.05";
+our $VERSION = "0.06";
 
 sub call {
     my($self, $env) = @_;
@@ -15,7 +16,7 @@ sub call {
         my $req = Plack::Request->new($env);
         my $params = $req->parameters;
         if (%$params) {
-            my $table = Text::ASCIITable->new;
+            my $table = Text::ASCIITable->new(+{ cb_count => \&Text::VisualWidth::UTF8::width });
             $table->setCols(qw(Parameter Value));
             for my $key (sort keys %$params) {
                 my @values = $params->get_all($key);

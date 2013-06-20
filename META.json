@@ -44,6 +44,7 @@
          "requires" : {
             "Plack::Request" : "0",
             "Text::ASCIITable" : "0",
+            "Text::VisualWidth" : "0",
             "parent" : "0",
             "perl" : "5.008005"
          }
@@ -71,7 +72,7 @@
          "web" : "https://github.com/Cside/Plack-Middleware-DebugRequestParameters"
       }
    },
-   "version" : "0.05",
+   "version" : "0.06",
    "x_contributors" : [
       "Syohei YOSHIDA <syohex@gmail.com>"
    ]
